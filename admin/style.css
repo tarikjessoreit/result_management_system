@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+   min-width:100%;
+    background-color: #131419;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form{
+    padding: 30px;
+    border-radius: 20px;
+    width: 450px;
+    box-shadow: -5px -5px 10px rgba(225,255,255,0.05),5px 5px 15px rgba(0,0,0,0.5);
+    color: #0abde3;   
+}
+.log-title{
+    text-align: center;
+    color: #0abde3;
+
+}
+.log-title{
+    text-align: center;
+    font-size: 25px;    
+}
+.log-title h4{
+    padding: 15px;   
+    font-size: 30px;
+}
+.log-title i{
+    padding: 15px;  
+    border-radius:50%;
+    box-shadow: -5px -5px 10px rgba(225,255,255,0.1),5px 5px 15px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.log-inp{
+    margin-bottom: 15px;   
+}
+.log-inp label{
+    display: block;
+    margin: 5px 0;
+}
+.log-inp input{
+    padding: 10px 60px 10px 10px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color:#131419;
+    color: #fff;
+    box-shadow: inset -2px -2px 6px rgba(225,255,255,0.1), inset 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.log-btn{
+    text-align: center;  
+    margin: 15px 0;   
+}
+.log-btn input{
+    padding: 10px 10px;
+    width: 30%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color:#131419;
+    color: #0abde3;
+    box-shadow:-2px -2px 6px rgba(225,255,255,0.1), 2px 2px 6px rgba(0,0,0,0.8);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: .5s;
+}
+.log-btn input:hover{
+    background-color:#0abde3;
+    color: #131419;  
+    box-shadow: inset -2px -2px 9px rgba(0, 105, 105, 0.1), inset 4px 4px 9px rgba(0,0,0,0.8);
+}
+
+.checkbox{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forg-pass a{
+    color: #0abde3;
+    text-decoration: none;
+}
+.forg-pass a:hover{
+    text-decoration: underline;
+}
+.main-inp{
+    position: relative;
+  
+}
+.main-inp i{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.social-icon{
+    margin: 20px 0;
+    text-align: center;
+}
+.social-title{
+    margin: 10px 0;
+    font-size: 16px;
+}
+.icon{
+   text-align: center;
+    
+}
+.icon i{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    padding: 15px;  
+    border-radius:50%;
+    box-shadow: -5px -5px 10px rgba(225,255,255,0.1),5px 5px 15px rgba(0,0,0,0.5);
+    cursor: pointer;
+    margin: 5px 10px;  
+
+}
+.icon i:hover{
+   transition: .5s;
+    background-color:#0abde3;
+    color: #131419;  
+    box-shadow: inset -2px -2px 9px rgba(0, 105, 105, 0.1), inset 4px 4px 9px rgba(0,0,0,0.8);
+}
+.sn-up{
+    margin: 10px 0;
+}
+.sn-up a{
+    text-decoration: none;
+}
+.sn-up a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/* register fomr start */
+
+.reg-form{
+    padding: 30px;
+    border-radius: 20px;
+    width: 450px;
+    box-shadow: -5px -5px 10px rgba(225,255,255,0.05),5px 5px 15px rgba(0,0,0,0.5);
+    color: #0abde3;
+}
+.reg-title{
+    text-align: center;
+    color: #0abde3;
+    
+}
+.reg-title h4{
+    padding: 15px;   
+    font-size: 30px;
+}
+.reg-title i{
+    padding: 15px;  
+    border-radius:50%;
+    box-shadow: -5px -5px 10px rgba(225,255,255,0.1),5px 5px 15px rgba(0,0,0,0.5);
+    cursor: pointer;  
+    
+}
+
+
+.checkbox .terms{
+    margin: auto;
+}
+.checkbox .terms a{
+   text-decoration: none;
+   
+}
+.checkbox .terms a:hover{
+   text-decoration: underline;
+
+}
+.reg-btn { 
+    text-align: center;
+    margin:15px 0 ;
+}
+.reg-btn input{ 
+    text-align: center;
+    padding: 10px 10px;
+    width: 40%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color:#131419;
+    color: #0abde3;
+    box-shadow:-2px -2px 6px rgba(225,255,255,0.1), 2px 2px 6px rgba(0,0,0,0.8);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: .5s;
+}
+.reg-btn input:hover{
+     background-color:#0abde3;
+    color: #131419;  
+    box-shadow: inset -2px -2px 9px rgba(0, 105, 105, 0.1), inset 4px 4px 9px rgba(0,0,0,0.8);
+}
+.sing-up{
+    text-align: center;
+}
+.sing-up a{
+    text-decoration: none;
+}
+.sing-up a:hover{
+    text-decoration:underline;
+}
+
+
+
+
+@media  (min-width:600px;) {
+    .container{
+       
+
+    }
+    
+}
