@@ -4,7 +4,16 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.container{
+
+/*header*/
+.header .profile-avt{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.login,.signup{
    min-width:100%;
     background-color: #131419;
     height: 100vh;

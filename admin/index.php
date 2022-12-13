@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-            <form>
+    <div class="container login">
+            <form action="dashboard.php">
                 <div class="login-form">
                     <div class="log-title">
                         <i class="fa-solid fa-user"></i>
@@ -19,9 +19,9 @@
 
                     <div class="inp-box">
                         <div class="log-inp">
-                            <label>Email</label>
+                            <label>Username</label>
                             <div class="main-inp">
-                                <input type="email" placeholder="Enter your Email" required>
+                                <input type="text" placeholder="Enter your username" required>
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             
@@ -58,7 +58,7 @@
                             <i class="fa-brands fa-twitter"></i>
                         </div>
                         <div class="sn-up">
-                            <span>Don't have account? <a href="./Reg-form.html">Sign Up</a></span>
+                            <span>Don't have account? <a href="./reg-form.php">Sign Up</a></span>
                         </div>
 
     

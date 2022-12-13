@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container signup">
         <form>
             <div class="reg-form">
                 <div class="reg-title">
@@ -59,7 +59,7 @@
                 <input type="submit" value="Create Account">
             </div>
             <div class="sing-up">
-                <span>Already Have an account? <a href="./index.html">Sign in</a></span>
+                <span>Already Have an account? <a href="./index.php">Sign in</a></span>
             </div>
 
         </form>
