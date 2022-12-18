@@ -1,4 +1,5 @@
-<!-- saved from url=(0080)https://student.jessoreboard.gov.bd/academic_transcript.php?id=2219456&year=2022 -->
+<?php include "config.php"; ?>
+<?php include "functions.php"; ?>
 <html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,6 +7,17 @@
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
+      <?php 
+         if (isset($_GET['id'])) {
+            $sid = $_GET['id'];
+            $year = $_GET['year'];
+
+            $sql = "SELECT * FROM ".RESULTTBL." WHERE student_ID = $sid AND exam_year = $year LIMIT 1";
+            
+            $res = $con->query($sql);
+            if ($res->num_rows > 0) {
+               while($r = $res->fetch_assoc()){
+       ?>
       <center>
          <div class="page_p">
             <h1>Kharicha Danga Secondary School</h1>
@@ -18,7 +30,7 @@
                      <td class="td_mid">
                         <img class="logo" src="assets/img/rp_logo.png">
                         <h1 class="title">ACADEMIC TRANSCRIPT-2022</h1>
-                        <h1>Student ID : <span>2219456</span></h1>
+                        <h1>Student ID : <span><?php echo $r['student_ID']; ?></span></h1>
                      </td>
                      <td>
                         <table class="mark_info">
@@ -115,35 +127,42 @@
                   <tbody>
                      <tr>
                         <th rowspan="2" class="thl">Subject Name</th>
-                        <th colspan="2">Average</th>
+                        <th colspan="3">Average</th>
                      </tr>
                      <tr>
-                        <th class="th2 th2l">Letter Grade</th>
+                        <th class="th2 th2l">Mark</th>
                         <th class="th2">Letter Grade</th>
+                        <th class="th2">Point</th>
                      </tr>
                      <tr>
                         <td>Bangla</td>
-                        <td>F</td>
-                        <td>0</td>
+                        <td><?php echo $r['bangla_mark']; ?></td>
+                        <td><?php get_res_letter($r['bangla_mark']) ?></td>
+                        <td><?php get_res_point($r['bangla_mark']) ?></td>
                      </tr>
                      <tr>
                         <td>English</td>
-                        <td>F</td>
-                        <td>0</td>
+                        <td><?php echo $r['english_mark']; ?></td>
+                        <td><?php get_res_letter($r['english_mark']) ?></td>
+                        <td><?php get_res_point($r['english_mark']) ?></td>
+
                      </tr>
                      <tr>
                         <td>Mathmatics</td>
-                        <td>F</td>
-                        <td>0</td>
+                        <td><?php echo $r['math_mark']; ?></td>
+                        <td><?php get_res_letter($r['math_mark']) ?></td>
+                        <td><?php get_res_point($r['math_mark']) ?></td>
                      </tr>
                      <tr>
                         <td></td>
                         <td></td>
                         <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                      </tr>
                      <tr>
                         <td>Grade Point Average (GPA)</td>
                         <td>-</td>
+                        <td>0.00</td>
                         <td>0.00</td>
                      </tr> 
                      
@@ -152,5 +171,21 @@
             </div>
          </div>
       </center>
+      <?php
+               }
+            }else{
+            echo "<center><h1>Result Not Found. Please try again.</h1></center>";
+         }
+
+         }else{
+            echo "<center><h1>Result Not Found. Please try again.</h1></center>";
+         }
+      ?>
+
+      <button onclick="window.print()">Print</button>
+
+      <script>
+         window.print();
+      </script>
    </body>
 </html>

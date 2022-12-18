@@ -1,10 +1,41 @@
 <?php require_once('header.php') ?>
+<?php 
+  $msg = "";
+  $err = "";
+  if (isset($_POST['addbtn'])) {
+    $entry_user_id = 1;
+    $entrydate = date('Y-m-d H:i:s');
+
+    $stdID = $_POST['stdid'];
+    $year = $_POST['examyear'];
+    $bangla = $_POST['banglamark'];
+    $eng = $_POST['engmark'];
+    $math = $_POST['mathmark'];
+    $status = 'active';
+
+    $sql = "INSERT INTO ".RESULTTBL."(res_entry_datetime, entry_by_user_ID, student_ID, exam_year, bangla_mark, english_mark, math_mark, res_status) VALUES ('$entrydate',$entry_user_id,$stdID,'$year',$bangla,$eng,$math,'$status')";
+    if($con->query($sql)==true){
+        $msg = "Data Added Successfull";
+    }else{
+      $err = 'Faild to insert:'.$con->error;
+    }
+  }
+
+?>
     <div class="container">
       <h1 class="border-bottom py-2 mb-4">Add Data</h1>
       <div class="row">
         <div class="col">
+
+          <?php if (!empty($msg)) { ?>
+          <div class="alert alert-success"><?php echo $msg; ?></div>
+          <?php } ?>
+          <?php if (!empty($err)) { ?>
+          <div class="alert alert-danger"><?php echo $err; ?></div>
+          <?php } ?>
+
           <!-- custom code here -->
-          <form>
+          <form method="post" action="">
             <div class="mb-3">
               <label for="stdid" class="form-label">Student ID</label>
               <input type="number" name="stdid" class="form-control" id="stdid">
@@ -38,7 +69,7 @@
             </div>
             
            
-            <button type="submit" name="" class="btn btn-primary px-4">Add Data</button>
+            <button type="submit" name="addbtn" class="btn btn-primary px-4">Add Data</button>
           </form>
         </div>
       </div>

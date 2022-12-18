@@ -236,3 +236,20 @@
     }
     
 }
+
+
+.alert-danger{
+    background: #ddd;
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert-success{
+    background: #ddd;
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}

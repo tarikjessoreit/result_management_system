@@ -17,17 +17,23 @@
             </tr>
         </thead>
         <tbody>
+        <?php 
+            $sql = "SELECT * FROM ".RESULTTBL;
+            $res = $con->query($sql);
+            while ($row = $res->fetch_assoc()) {
+            ?>
             <tr>
-                <td>220965</td>
-                <td>2017</td>
-                <td>66</td>
-                <td>75</td>
-                <td>80</td>
+                <td><?php echo $row["student_ID"];?></td>
+                <td><?php echo $row["exam_year"];?></td>
+                <td><?php echo $row["bangla_mark"];?></td>
+                <td><?php echo $row["english_mark"];?></td>
+                <td><?php echo $row["math_mark"];?></td>
                 <td>
-                  <a href="edit.php" class="btn btn-sm btn-primary">&#9998;</a>
+                  <a href="edit.php?rid=<?php echo $row["ID"];?>" class="btn btn-sm btn-primary">&#9998;</a>
                   <a href="#" class="btn btn-sm btn-danger">&#128465;</a>
                 </td>
             </tr>
+        <?php } ?>
         </tbody>
         <tfoot>
             <tr>

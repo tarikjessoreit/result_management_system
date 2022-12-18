@@ -22,15 +22,15 @@
         <form method="get" action="result.php">         
             <div class="rslt">
                 <label >Student ID:</label>
-                <input type="text" name="stdid" class="std_id">      
+                <input type="text" name="id" class="std_id">      
                 <label >Exam Year:</label>
-                <input type="text" name="examyear" class="std_year">  
+                <input type="text" name="year" class="std_year">  
                 <button type="submit">Result</button>    
             </div>
         </form>
 
         </div>
-
+        <a href="live-res.php">Click here for live search</a>
     </div>
     
 </body>
