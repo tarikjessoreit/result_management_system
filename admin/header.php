@@ -1,5 +1,10 @@
 <?php include "../config.php"; ?>
 <?php include "../functions.php"; ?>
+<?php 
+if (!isset($_SESSION['logstatus']) && $_SESSION['logstatus']!=true) {
+    header('location:./');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,7 +35,7 @@
             <div class="dropdown header-right">
               <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="assets/img/user-profile.jpg" alt="" class="profile-avt">
-                Mr. Jon
+                <?php echo $_SESSION['uname']; ?>
               </button>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">profile</a></li>

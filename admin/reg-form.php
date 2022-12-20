@@ -1,4 +1,4 @@
-<?php include "../config.php"; ?>
+<?php include "../config.php"; ?> 
 <?php include "../functions.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +18,8 @@
             $joindate = date('Y-m-d H:i:s');
 
             $username = $_POST['uname'];
-            $password = $_POST['upass'];
-            $cpassword = $_POST['cupass'];
+            $password = md5($_POST['upass']);
+            $cpassword = md5($_POST['cupass']);
             $status = 'active';
 
             if ($password == $cpassword) {
